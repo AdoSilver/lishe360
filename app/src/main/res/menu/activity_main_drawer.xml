@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/lishe"
+            android:icon="@drawable/ic_aboutt"
+            android:title="About" />
+
+        <item
+            android:id="@+id/dodoso"
+            android:icon="@drawable/dodoso"
+            android:title="Dodoso" />
+
+
+
+
+    </group>
+
+    <item android:title="Mawasilisano">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_action_feedb"
+                android:title="Help &amp; feedback" />
+
+        </menu>
+    </item>
+
+
+    <item android:title="Mitandao ya kijamii">
+        <menu>
+            <item
+                android:id="@+id/facebook_follow"
+                android:icon="@drawable/ic_bt_login_facebook"
+                android:title="Facebook" />
+
+        </menu>
+    </item>
+
+
+    <item android:title="Exit">
+        <menu>
+            <item
+                android:id="@+id/btnLogout"
+                android:icon="@drawable/logout"
+                android:title="Log Out" />
+
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f6fb"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_header_height"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:id="@+id/header_layout">
+
+        <ImageView
+            android:id="@+id/header_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:gravity="center"
+            android:src="@drawable/splash_background"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/header_tint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="#dd702899"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/login_header_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/login_header_text_view"
+            android:text="Login"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/login_regular_padding"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/login_regular_padding"
+            android:id="@+id/cancel"
+            android:src="@drawable/ic_cancel"
+            app:backgroundTint="#f3f6fb"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+
+    <com.truizlop.fabreveallayout.FABRevealLayout
+        android:id="@+id/fab_reveal_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_layout">
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_btn"
+            android:src="@drawable/ic_person_add"
+            app:backgroundTint="@color/colorPrimary" />
+
+        <include layout="@layout/content_login" />
+
+        <include layout="@layout/content_login" />
+
+    </com.truizlop.fabreveallayout.FABRevealLayout>
+
+
+    <com.truizlop.fabreveallayout.FABRevealLayout
+        android:id="@+id/fab_register_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_layout"
+        android:visibility="gone">
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_btn"
+            android:src="@mipmap/cancel"
+            app:backgroundTint="@color/colorPrimary" />
+
+        <include layout="@layout/content_registration" />
+
+        <include layout="@layout/content_registration" />
+
+    </com.truizlop.fabreveallayout.FABRevealLayout>
+
+
+    <com.truizlop.fabreveallayout.FABRevealLayout
+        android:id="@+id/fab_recover_pass_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_layout"
+        android:visibility="gone">
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_recover_btn"
+            android:src="@mipmap/cancel"
+            app:backgroundTint="@color/colorPrimary" />
+
+        <include layout="@layout/activity_reset_password" />
+
+        <include layout="@layout/activity_reset_password" />
+
+    </com.truizlop.fabreveallayout.FABRevealLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="@dimen/login_layout_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_regular_padding"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:fontFamily="sans-serif"
+            android:text="Login to access your subscription in Lishe360"
+            android:textSize="@dimen/login_sub_header_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_button_size"
+        android:layout_marginTop="@dimen/login_text_edit_margin"
+        android:padding="5dp"
+        android:background="@drawable/text_edit_outlined_layout"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_text_edit_icon_size"
+            android:layout_gravity="center"
+            android:tint="#9c9c9c"
+            android:layout_weight="1.75"
+            android:src="@mipmap/user" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.25">
+
+            <EditText
+                app:theme="@style/AppCustomTextTheme"
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Username"
+                android:textColor="#444444"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:background="@color/white"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/colorPrimary"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_button_size"
+        android:layout_marginTop="@dimen/login_regular_padding"
+        android:orientation="horizontal"
+        android:background="@drawable/text_edit_outlined_layout"
+        android:padding="5dp"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_text_edit_icon_size"
+            android:layout_gravity="center"
+            android:layout_weight="1.75"
+            android:tint="#9c9c9c"
+            android:src="@mipmap/password" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.25">
+
+            <EditText
+                app:theme="@style/AppCustomTextTheme"
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Password"
+                android:textColor="#444444"
+                android:textStyle="bold"
+                android:background="@color/white"
+                android:fontFamily="sans-serif"
+                android:inputType="textPassword"
+                android:textColorHint="@color/colorPrimary" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_regular_padding"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/forget_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="sans-serif"
+            android:text="@string/btn_forgot_password"
+            android:textSize="@dimen/button_text_size" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_text_edit_margin"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login "
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textAllCaps="false"
+            android:background="@drawable/primary_btn_layout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:theme="@style/AppCustomTextTheme"
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/login_progress_bar_size"
+        android:layout_height="@dimen/login_progress_bar_size"
+        android:layout_marginTop="@dimen/login_regular_padding"
+        android:layout_gravity="center|bottom"
+        android:visibility="gone" />
+
+
+</LinearLayout>

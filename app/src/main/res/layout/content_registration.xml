@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="@dimen/login_layout_padding">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/button_text_size"
+        android:id="@+id/reg_sub_header"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="@dimen/login_regular_padding"
+        android:textColor="#444444"
+        android:text="If you are new to Lishe360 Anywhere, the best place to get started is with our getting started videos."/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_text_edit_margin"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:id="@+id/reg_player_layout">
+
+        <Button
+            android:id="@+id/reg_player_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get stated with video"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textAllCaps="false"
+            android:background="@drawable/primary_btn_layout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:textStyle="bold"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/login_regular_padding"
+        android:textSize="@dimen/button_text_size"/>
+
+    <TextView
+        android:id="@+id/contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Us"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/login_regular_padding"
+        android:textSize="@dimen/button_text_size"/>
+
+
+</LinearLayout>

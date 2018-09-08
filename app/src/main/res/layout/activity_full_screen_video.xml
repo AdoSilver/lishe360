@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f6fb"
+    tools:context="com.cardeanutrition.lishe360app.activities.FullScreenVideoActivity"
+    android:orientation="vertical">
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/player_height">
+
+
+    </com.google.android.youtube.player.YouTubePlayerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_text_edit_margin"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Playing"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textAllCaps="false"
+            android:background="@drawable/primary_btn_layout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\u00A9 2018 Lishe360 Tanzania, All rights reserved"
+        android:textSize="@dimen/splash_footer_text_size"
+        android:layout_marginTop="@dimen/splash_button_margins"
+        android:padding="5dp"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:fontFamily="sans-serif"
+        android:id="@+id/getStarted_terms_policy"
+        android:visibility="visible"/>
+
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //Splash Activity
+    <dimen name="splash_icon_size">200dp</dimen>
+    <dimen name="splash_icon_margin_top">240dp</dimen>
+
+    <dimen name="splash_text_size">16sp</dimen>
+    <dimen name="super_title_text_size">52sp</dimen>
+    <dimen name="sub_title_text_size">27sp</dimen>
+    <dimen name="splash_normal_padding">20dp</dimen>
+    <dimen name="super_title_margin_top">140dp</dimen>
+    <dimen name="splash_button_height">100dp</dimen>
+    <dimen name="splash_button_margins">40dp</dimen>
+    <dimen name="button_text_size">16sp</dimen>
+    <dimen name="splash_footer_text_size">13sp</dimen>
+
+    //Login activity
+    <dimen name="login_header_height">400dp</dimen>
+    <dimen name="login_header_text_size">42sp</dimen>
+    <dimen name="login_regular_padding">20dp</dimen>
+    <dimen name="login_button_size">80dp</dimen>
+    <dimen name="login_layout_padding">60dp</dimen>
+    <dimen name="login_sub_header_text_size">20sp</dimen>
+    <dimen name="login_text_edit_margin">40dp</dimen>
+    <dimen name="login_text_edit_icon_size">50dp</dimen>
+    <dimen name="login_progress_bar_size">60dp</dimen>
+
+    //You Tube activity
+    <dimen name="player_height">700dp</dimen>
+
+
+    //Authentication screen
+    <dimen name="signup_logo_marginTop">200dp</dimen>
+    <dimen name="signin_logo_marginTop">140dp</dimen>
+    <dimen name="signup_logo_smaller_marginTop">40dp</dimen>
+    <dimen name="signup_logo_size">35sp</dimen>
+    <dimen name="signup_motto_textSize">18sp</dimen>
+    <dimen name="signup_usernameEdit_Width">620dp</dimen>
+    <dimen name="signup_label_textsize">15sp</dimen>
+    <dimen name="signup_firstlabel_marginTop">60dp</dimen>
+    <dimen name="signup_usernameEdit_Height">76dp</dimen>
+    <dimen name="signup_label_marginTop">20dp</dimen>
+    <dimen name="signup_signup_button_height">60dp</dimen>
+    <dimen name="signup_signup_button_width">580dp</dimen>
+    <dimen name="signup_signup_marginTop">40dp</dimen>
+    <dimen name="signup_textEdit_textSize">16sp</dimen>
+    <dimen name="signup_featured_buttons_padding">14dp</dimen>
+    <dimen name="signup_featured_button_width">304dp</dimen>
+    <dimen name="signup_signin_altenative_marginBottom">20dp</dimen>
+
+    <dimen name="ep_imageBtn_size">60dp</dimen>
+
+    <dimen name="general_tab_text_size">19sp</dimen>
+
+
+    //main Activity
+    <dimen name="sub_tab_height">400dp</dimen>
+    <dimen name="toolbar_height">100dp</dimen>
+
+    <dimen name="new_post_counter_margin_top">32dp</dimen>
+    <dimen name="new_floating_button_margin_top">170dp</dimen>
+
+    <dimen name="header_text_size">24sp</dimen>
+    <dimen name="content_text_size">20sp</dimen>
+    <dimen name="username_text_size">18sp</dimen>
+    <dimen name="username_date_text_size">16sp</dimen>
+    <dimen name="subject_photo_size">240dp</dimen>
+    <dimen name="subject_layout_width">400dp</dimen>
+    <dimen name="navigation_width">160dp</dimen>
+    <dimen name="image_navigation_width">120dp</dimen>
+    <dimen name="send_button_size">100dp</dimen>
+
+    <dimen name="drawer_width">700dp</dimen>
+    <dimen name="drawer_user_photo_size">120dp</dimen>
+
+</resources>

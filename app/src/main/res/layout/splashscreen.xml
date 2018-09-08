@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lin_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/splash_background"
+        android:scaleType="centerCrop"
+        android:id="@+id/splash_background"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dd702899"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/slide_1_title"
+        android:textSize="@dimen/super_title_text_size"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="@dimen/super_title_margin_top"
+        android:padding="@dimen/splash_normal_padding"
+        android:id="@+id/lishe_title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/slide_1_desc"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/sub_title_text_size"
+        android:textColor="@color/white"
+        android:layout_below="@id/lishe_title"
+        android:paddingLeft="@dimen/splash_normal_padding"
+        android:paddingRight="@dimen/splash_normal_padding"
+        android:id="@+id/lishe_pitch"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/get_started_form"
+            android:padding="@dimen/splash_normal_padding">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/splash_button_height"
+                android:layout_marginTop="@dimen/splash_button_margins"
+                android:textColor="#ffffff"
+                android:text="Get Started"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:id="@+id/get_started_btn"
+                android:textAllCaps="false"
+                android:textSize="@dimen/button_text_size"
+                android:background="@drawable/primary_btn_layout"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/splash_button_height"
+                android:textColor="@color/white"
+                android:text="Login"
+                android:layout_below="@id/get_started_btn"
+                android:layout_marginTop="@dimen/splash_button_margins"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:id="@+id/login_btn"
+                android:textAllCaps="false"
+                android:textSize="@dimen/button_text_size"
+                android:background="@drawable/primary_dark_btn_layout"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_btn"
+                android:text="@string/copyright_details"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/splash_footer_text_size"
+                android:layout_marginTop="@dimen/splash_button_margins"
+                android:padding="5dp"
+                android:textColor="#666666"
+                android:fontFamily="sans-serif"
+                android:id="@+id/getStarted_terms_policy"
+                android:visibility="visible"/>
+        </RelativeLayout>
+
+
+</RelativeLayout>

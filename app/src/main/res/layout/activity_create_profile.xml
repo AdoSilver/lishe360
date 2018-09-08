@@ -1,0 +1,135 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#f3f6fb"
+    tools:context=".activities.CreateProfileActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:background="#f3f6fb"
+        android:id="@+id/cart_appBarLayout"
+        android:stateListAnimator="@null">
+        <include
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:theme="@style/AppTheme.AppBarOverlay"
+            layout="@layout/create_profile_toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/login_layout_padding">
+
+        <RelativeLayout
+            android:id="@+id/imageContainer"
+            android:layout_width="@dimen/profile_photo_side"
+            android:layout_height="@dimen/profile_photo_side"
+            android:layout_gravity="center_horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/profile_photo_side"
+                android:layout_height="@dimen/profile_photo_side"
+                android:src="@drawable/blank_profile_image"
+                app:civ_border_width="0.2dp"
+                app:civ_border_color="#d0d3d5"/>
+
+            <ProgressBar
+                android:theme="@style/AppCustomTextTheme"
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/progress_bar_size"
+                android:layout_height="@dimen/progress_bar_size"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:layout_width="@dimen/ep_imageBtn_size"
+                android:layout_height="@dimen/ep_imageBtn_size"
+                android:src="@drawable/ic_image_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/ep_cover_change_btn"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_button_size"
+            android:layout_marginTop="@dimen/login_text_edit_margin"
+            android:padding="5dp"
+            android:background="@drawable/text_edit_outlined_layout"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_text_edit_icon_size"
+                android:layout_gravity="center"
+                android:tint="#9c9c9c"
+                android:layout_weight="1.75"
+                android:src="@mipmap/user" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.25">
+
+                <EditText
+                    app:theme="@style/AppCustomTextTheme"
+                    android:id="@+id/nameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="@string/prompt_name"
+                    android:textColor="#444444"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
+                    android:background="@color/white"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/colorPrimary"
+                    android:maxLines="1"
+                    tools:ignore="InvalidImeActionId" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_text_edit_margin"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/saveProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Profile "
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textAllCaps="false"
+                android:background="@drawable/primary_btn_layout"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

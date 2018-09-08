@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorPrimaryDark"
+    android:minHeight="?attr/actionBarSize"
+    android:fitsSystemWindows="true"
+    android:id="@+id/post_details_toolbar"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/signup_label_marginTop"
+            android:paddingTop="@dimen/signup_label_marginTop"
+            android:paddingBottom="@dimen/signup_label_marginTop"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_white"
+            android:id="@+id/pd_back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post Details"
+            android:layout_toRightOf="@id/pd_back_button"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/pd_toolbar_title"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>
