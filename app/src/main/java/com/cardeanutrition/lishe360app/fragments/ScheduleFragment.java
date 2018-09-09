@@ -18,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
@@ -51,6 +52,12 @@ public class ScheduleFragment extends Fragment implements TopiscAdapter.OnItemCl
     private List<Topics> mList;
     private SwipeRefreshLayout swipeContainer;
     private ProfileManager profileManager;
+    List<String> selected_categories;
+    RecyclerView categoriesRecyclerView;
+    RecyclerView.LayoutManager categoriesLayoutManager;
+    categoriesRecyclerAdapter categoriesRecyclerAdapter;
+
+    public String keyword = null;
 
 
     public ScheduleFragment() {
@@ -99,14 +106,31 @@ public class ScheduleFragment extends Fragment implements TopiscAdapter.OnItemCl
         mProgressBar = (ProgressBar) view.findViewById(R.id.pb);
         swipeContainer = (SwipeRefreshLayout) view.findViewById(R.id.swipeContainer);
         recyclerView = (RecyclerView) view.findViewById(R.id.topicsrecycleview);
+        categoriesRecyclerView = (RecyclerView) view.findViewById(R.id.cs_category_recycler_view);
+        categoriesRecyclerView.setHasFixedSize(true);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         profileManager = ProfileManager.getInstance(getActivity());
+
+        selected_categories = new ArrayList<>();
 
         layoutManager.setReverseLayout(true);
         layoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(layoutManager);
 
+        categoriesLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+        categoriesRecyclerView.setLayoutManager(categoriesLayoutManager);
+        initializingCategories();
+
+        categoriesRecyclerAdapter = new categoriesRecyclerAdapter(getActivity(),selected_categories);
+        categoriesRecyclerView.setAdapter(categoriesRecyclerAdapter);
+        categoriesRecyclerView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                //nameEdit.clearFocus();
+                return false;
+            }
+        });
 
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -114,13 +138,9 @@ public class ScheduleFragment extends Fragment implements TopiscAdapter.OnItemCl
                 if (hasInternetConnection()) {
                     retrieveData();
                     swipeContainer.setRefreshing(false);
-
-
                 } else {
-
                     swipeContainer.setRefreshing(false);
                     showSnackBar(R.string.internet_connection_failed);
-
                 }
             }
 
@@ -243,4 +263,14 @@ public class ScheduleFragment extends Fragment implements TopiscAdapter.OnItemCl
         b.getButton(b.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.primary));
 
     }
+
+
+    private void initializingCategories(){
+        String[] categoriesNames = {"chakula","usafi","cliniki", "afya", "chanjo","madawa"};
+        for(int i=1; i < categoriesNames.length+1; i++){
+            selected_categories.add(categoriesNames[i-1]);
+        }
+    }
+
+
 }

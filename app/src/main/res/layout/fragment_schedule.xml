@@ -5,18 +5,41 @@
     tools:context="com.cardeanutrition.lishe360app.fragments.ScheduleFragment">
 
 
-
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/swipeContainer"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:paddingLeft="@dimen/login_regular_padding"
+            android:textColor="#9c9c9c"
+            android:textSize="@dimen/signup_textEdit_textSize"/>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/topicsrecycleview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="@dimen/toolbar_height"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/login_regular_padding"
+            android:id="@+id/cs_category_recycler_view">
+        </android.support.v7.widget.RecyclerView>
 
-    </android.support.v4.widget.SwipeRefreshLayout>
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/topicsrecycleview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
 
 
     <ProgressBar

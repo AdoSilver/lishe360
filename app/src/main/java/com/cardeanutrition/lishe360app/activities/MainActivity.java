@@ -47,6 +47,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private String currentUserId;
     private Locale locale;
     FirebaseUser firebaseUser;
+    public ScheduleFragment scheduleFragment;
 
 
     @Override
@@ -62,6 +63,8 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        scheduleFragment = new ScheduleFragment();
 
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
@@ -120,7 +123,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         homeViewPagerAdapter = new HomeViewPagerAdapter(getSupportFragmentManager());
         homeViewPagerAdapter.addFragments(new HomeFragment(), "Home");
         homeViewPagerAdapter.addFragments(new UsersFragment(), "Midahalo");
-        homeViewPagerAdapter.addFragments(new ScheduleFragment(), "Masomo");
+        homeViewPagerAdapter.addFragments(scheduleFragment, "Masomo");
 
 
         homeViewPager.setAdapter(homeViewPagerAdapter);

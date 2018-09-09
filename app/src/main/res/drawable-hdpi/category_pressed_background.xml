@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background Color -->
+    <solid android:color="@color/category_pressed_btn_state_list" />
+
+    <!-- Border Color -->
+    <stroke android:width="0.3dp" android:color="#444444" />
+
+    <!-- Round Corners -->
+    <corners android:radius="@dimen/cs_layout_margin_top" />
+
+
+</shape>
