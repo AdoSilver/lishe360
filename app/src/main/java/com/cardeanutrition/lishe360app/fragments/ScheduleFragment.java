@@ -14,6 +14,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -171,6 +172,7 @@ public class ScheduleFragment extends Fragment implements TopiscAdapter.OnItemCl
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 mList.clear();
+                Log.d("kisanga",dataSnapshot.toString());
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Topics topics = snapshot.getValue(Topics.class);
                     mList.add(topics);

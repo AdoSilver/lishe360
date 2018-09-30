@@ -23,6 +23,7 @@ import com.cardeanutrition.lishe360app.R;
 import com.cardeanutrition.lishe360app.managers.PostManager;
 import com.cardeanutrition.lishe360app.managers.listeners.OnPostCreatedListener;
 import com.cardeanutrition.lishe360app.model.Post;
+import com.cardeanutrition.lishe360app.services.NotificationService;
 import com.cardeanutrition.lishe360app.utils.LogUtil;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -232,6 +233,7 @@ public class CreatePostActivity extends PickImageActivity implements OnPostCreat
         post.setDescription(description);
         post.setAuthorId(FirebaseAuth.getInstance().getCurrentUser().getUid());
         postManager.createOrUpdatePostWithImage(imageUri, CreatePostActivity.this, post);
+        new NotificationService(CreatePostActivity.this, title,description, "").execute();
 
    /**
         //save post while sending notification to others users

@@ -21,6 +21,7 @@ import com.cardeanutrition.lishe360app.R;
 import com.cardeanutrition.lishe360app.managers.PostManager;
 import com.cardeanutrition.lishe360app.managers.listeners.OnPostChangedListener;
 import com.cardeanutrition.lishe360app.model.Post;
+import com.cardeanutrition.lishe360app.services.NotificationService;
 
 public class EditPostActivity extends CreatePostActivity {
     private static final String TAG = EditPostActivity.class.getSimpleName();
@@ -135,6 +136,7 @@ public class EditPostActivity extends CreatePostActivity {
             postManager.createOrUpdatePost(post);
             onPostSaved(true);
         }
+        new NotificationService(EditPostActivity.this, title,description, "").execute();
     }
 
     private void fillUIFields() {
